@@ -1,0 +1,93 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: system-ui;
+  background-image: url(img.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  block-size: 100vh;
+  position: relative;
+}
+
+.btn--open {
+  padding: 1.5rem 3rem;
+  position: absolute;
+  inset-block-end: 10rem;
+  inset-inline-start: 10rem;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  border: none;
+  transition: all 0.5s;
+}
+
+.btn--open:hover {
+  box-shadow: 0px 0px 0px 2px hsl(0, 0%, 0%);
+}
+
+.btn--open p {
+  font-family: system-ui;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.modal-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  background-color: #fff;
+  max-inline-size: 40rem;
+  padding: 3rem;
+  position: absolute;
+  inset-inline-start: 50%;
+  inset-block-start: 50%;
+  translate: -50% -50%;
+  border-radius: 0.5rem;
+  animation: animateModal 0.2s ease-in-out;
+}
+
+.btn--close {
+  background: none;
+  padding: 0.5rem;
+  border: none;
+  font-size: 3rem;
+  cursor: pointer;
+  color: red;
+}
+
+.modal-container {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-container[data-visible] {
+  display: block;
+}
+
+@keyframes animateModal {
+  from {
+    /* inset-block-start: -100%; */
+    scale: 0;
+    opacity: 0;
+  }
+  to {
+    /* inset-block-start: 50%; */
+    scale: 1;
+    opacity: 1;
+  }
+}

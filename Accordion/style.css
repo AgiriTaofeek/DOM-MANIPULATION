@@ -1,0 +1,99 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: system-ui;
+  background-image: url(../Modal-Button/img.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-block-size: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.accordion {
+  background-color: #fff;
+  max-inline-size: 65vw;
+  padding: 3rem;
+  border-radius: 1.5rem;
+}
+
+.accordion__title {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.accordion__question {
+  padding: 1.8rem 0;
+  cursor: pointer;
+  border-bottom: 1px solid #000;
+  position: relative;
+  /*   button */
+  background: none;
+  font-family: system-ui;
+  border: none;
+  inline-size: 100%;
+  text-align: left;
+  font-size: 2.5rem;
+  transition: all 0.5s;
+}
+
+.accordion__question::after {
+  position: absolute;
+  content: '+';
+  inset-inline-end: 1rem;
+  transition: all 0.5s;
+}
+
+.accordion__answer {
+  padding-top: 1.5rem;
+  block-size: 0;
+  inline-size: 100%;
+  overflow: hidden;
+  transition: all 0.5s;
+  /*  */
+  font-size: 1.8rem;
+}
+
+/*  My style */
+.accordion__question-wrapper[data-visible] + .accordion__answer {
+  block-size: 15rem;
+}
+
+.accordion__question[data-visible] {
+  font-size: 1.6rem;
+  transition: all 0.5s;
+}
+
+.accordion__question-wrapper[data-visible] .accordion__question::after {
+  font-size: 3rem;
+  transition: all 0.5s;
+  content: '-';
+}
+
+/*
+.accordion__content.active .accordion__answer {
+  block-size: 15rem;
+}
+
+.accordion__content.active .accordion__question {
+  font-size: 1.6rem;
+  transition: all 0.5s;
+}
+.accordion__content.active .accordion__question::after {
+  font-size: 3rem;
+  transition: all 0.5s;
+  content: '-';
+} */

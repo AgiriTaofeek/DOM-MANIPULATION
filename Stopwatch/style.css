@@ -1,0 +1,67 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: system-ui;
+  min-block-size: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(../Modal-Button/img.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.stopwatch {
+  max-inline-size: 60vw;
+  background-color: hsl(0, 0%, 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 3rem 5rem;
+  border-radius: 0.5rem;
+  gap: 2rem;
+}
+
+.timer {
+  font-size: 7rem;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  padding: 1.2rem;
+  border-radius: .5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+ion-icon {
+  font-size: 3rem;
+  color: hsl(0, 0%, 100%);
+}
+
+.btn--start{
+    background-color: hsl(120, 100%, 25%);
+
+}
+.btn--reset{
+    background-color: hsl(0, 100%, 50%);
+}
+
+.btn--pause{
+    background-color: hsl(39, 100%, 50%);
+}

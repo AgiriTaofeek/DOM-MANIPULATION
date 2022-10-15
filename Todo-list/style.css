@@ -1,0 +1,119 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: system-ui;
+  font-size: 1.6rem;
+  min-height: 100vh;
+  background-image: url(../Modal-Button/img.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.add-task-wrapper {
+  inline-size: 35rem;
+  padding: 2rem 1rem;
+  background-color: #fff;
+  border-radius: 0.8rem;
+  display: flex;
+  gap: 2rem;
+}
+
+input {
+  flex: 2;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  font-size: 1.6rem;
+  font-family: system-ui;
+}
+
+.btn--add-task {
+  flex: 0.5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: 0.2rem solid green;
+  border-radius: 0.5rem;
+  color: green;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.btn--add-task:hover {
+  background-color: green;
+  color: white;
+}
+
+ion-icon {
+  font-size: 3rem;
+  /* color: green; */
+}
+
+li {
+  list-style: none;
+  font-size: 1.6rem;
+}
+
+.task {
+  display: flex;
+  inline-size: 100%;
+  background-color: #fff;
+  border-radius: 0.8rem;
+  padding: 2rem 1rem;
+}
+
+.task li {
+  margin-right: auto;
+  flex: 2.5;
+}
+
+.btn {
+  flex: 0.2;
+  background: none;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.3rem;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s;
+}
+
+.delete-task {
+  color: red;
+}
+
+.delete-task:hover {
+  background-color: red;
+  color: white;
+}
+
+.check-task {
+  color: orange;
+}
+
+.check-task:hover {
+  background-color: orange;
+  color: white;
+}
